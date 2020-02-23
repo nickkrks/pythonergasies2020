@@ -1,0 +1,12 @@
+with open('text.txt') as f:
+    content = f.read()
+
+result=content.split(" ")
+result=list(dict.fromkeys(result))
+result.sort(key = len)
+
+print(result[-1].translate(None, 'aeiouAEIOU')[::-1])
+print(result[-2].translate(None, 'aeiouAEIOU')[::-1])
+print(result[-3].translate(None, 'aeiouAEIOU')[::-1])
+print(result[-4].translate(None, 'aeiouAEIOU')[::-1])
+print(result[-5].translate(None, 'aeiouAEIOU')[::-1])
